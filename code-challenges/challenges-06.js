@@ -9,21 +9,20 @@
 //  
 // Input: [12, 32, 22, 45, 78, 12, 50]
 // Output: 78
-
+var arr=[20, 31, 15, 41, 20, 48];
 const findMax = (arr)=>{
-    let max=12;
-    var arr=[12, 32, 22, 45, 78, 12, 50];
-    for(let i=0;i<arr.length-1;i++)
+    let max=null;
+    for(let i=0;i<arr.length;i++)
     {
         if(arr[i]>max)
         {
             max=arr[i];
         }
     }
-    
+    console.log(max);
     return max;
 }
-console.log(findMax());
+console.log(findMax(arr));
 
 // -------------------------------------------------------------------------------------------------------
 //  Challenge 02:
@@ -35,20 +34,19 @@ console.log(findMax());
 // Input: [20, '234', 'car', 41, 20, 'chair']
 // Output: 81
 //  
-
+let array1=[20, '234', 'car', 41, 20, 'chair'];
 const sumNums = (arr)=>{
     let sum=0;
-    let array1=[20, '234', 'car', 41, 20, 'chair'];
-    for(let i=0;i<array1.length;i++)
+    for(let i=0;i<arr.length;i++)
     {
-        if(typeof array1[i]=="number")
+        if(typeof arr[i]=="number")
         {
-            sum+=array1[i];
+            sum+=arr[i];
         }
     }
     return sum;
 }
-console.log(sumNums());
+console.log(sumNums(array1));
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
@@ -60,10 +58,10 @@ console.log(sumNums());
 //  
 // Input: ['C#', 'JS', 'Ruby','Python'] 
 // Output: ['Python','Ruby','JS','C#']
+var originArray = ['C#', 'JS', 'Ruby','Python'] ;
 
 const reverseArray = (arr)=>{
     let reversedArray = [];
-    var originArray = ['C#', 'JS', 'Ruby','Python'] ;
     for (let i = originArray.length-1; i>=0 ; i--)
     {
     let value=originArray[i];
@@ -74,7 +72,7 @@ const reverseArray = (arr)=>{
     return originArray;
 
 }
-console.log(reverseArray());
+console.log(reverseArray(originArray));
 
 // -------------------------------------------------------------------------------------------------------
 
