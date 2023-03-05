@@ -71,7 +71,7 @@ const reverseArray = (arr)=>{
     }
     console.log(reversedArray);
 
-    return originArray();
+    return originArray;
 
 }
 console.log(reverseArray());
