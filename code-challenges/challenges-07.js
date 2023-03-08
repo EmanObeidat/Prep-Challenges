@@ -42,32 +42,32 @@ const objLat = (obj) => {
 //  fullName and tech if the applicant has more than one year of Experience
 
 // Input:
-let cvs = [
-    {
-        firstName: "Jason",
-        lastName: "James",
-        yearsOfExperience: 20,
-        tech: "JS"
-    },
-    {
-        firstName: "Shira",
-        lastName: null,
-        yearsOfExperience: 5,
-        tech: ".Net"
-    },
-    {
-        firstName: "Dmitri",
-        lastName: "Akkerman",
-        yearsOfExperience: 1,
-        tech: "Python"
-    },
-    {
-        firstName: "Isabella",
-        lastName: null,
-        yearsOfExperience: 7,
-        tech: "Java"
-    }
-]
+// let cvs = [
+//     {
+//         firstName: "Jason",
+//         lastName: "James",
+//         yearsOfExperience: 20,
+//         tech: "JS"
+//     },
+//     {
+//         firstName: "Shira",
+//         lastName: null,
+//         yearsOfExperience: 5,
+//         tech: ".Net"
+//     },
+//     {
+//         firstName: "Dmitri",
+//         lastName: "Akkerman",
+//         yearsOfExperience: 1,
+//         tech: "Python"
+//     },
+//     {
+//         firstName: "Isabella",
+//         lastName: null,
+//         yearsOfExperience: 7,
+//         tech: "Java"
+//     }
+// ]
 //
 // Output:
 // [
@@ -88,36 +88,31 @@ let cvs = [
 //  Note that:
 //  1- Full name is first name + last name
 //  2- If one of the names is null don`t add it to the full name
-let fullName;
-let techVar;
-const array1=[];
-const obj1={};
+
 
 const cvFormatter = (arr) => {
-for(let i=0;i<arr.length;i++)
-{
-    if(arr[i].yearsOfExperience>1)
-    {
-        if(arr[i].firstName==null)
-        {
-            fullName=arr[i].lastName;
+    let allEmployee=[];
+    for(let i=0;i<arr.length;i++){
+        var obje=new Object();
+        if(arr[i].yearsOfExperience>1){
+            if(arr[i].firstName==null){
+                obje.fullName=arr[i].lastName;
+                obje.tech=arr[i].tech;
+            }
+            else if(arr[i].lastName==null){
+                obje.fullName=arr[i].firstName;
+                obje.tech=arr[i].tech;
+            }
+            else {
+                obje.fullName=arr[i].firstName+" "+arr[i].lastName;
+                obje.tech=arr[i].tech;
+            }
+            allEmployee.push(obje);
         }
+        
     }
-    else if(arr[i].lastName==null)
-    {
-        fullName=arr[i].firstName;
-    }
-    else
-    {
-fullName=arr[i].firstName+arr[i].lastName;
-    }
-       obj1={
-        "FullName":fullName,
-        "Tech":techVar,
-       };
-       array1.push(obj1)
+return allEmployee;
 }
-return array1
 
 
 
