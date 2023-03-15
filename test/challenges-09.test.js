@@ -105,7 +105,7 @@ describe("Challenge09", () => {
 });
 
 describe("Challenge09", () => {
-  test.skip("Employees-Bonus", () => {
+  test("Employees-Bonus", () => {
     expect(employeesBonus(data)).toStrictEqual(res);
     expect(employeesBonus(data2)).toStrictEqual(res2);
   });
