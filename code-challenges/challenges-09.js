@@ -40,8 +40,9 @@ const arrInc = (arr) => {
 //  [5, 6, 7, 7]
 // 
 const roundDecimals = (arr) => {
-    // write your code here
-}
+let result=[]
+arr.forEach(i =>result.push(Math.round(i)));
+return result;}
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
@@ -109,21 +110,23 @@ const roundDecimals = (arr) => {
 //
 
 const employeesBonus = (arr) => {
-   var x=2;
-   for (x in arr)
-   {
-    if (arr[x]>=8)
+ exercise09
+    for(let i = 0; i < arr.length; i++){
+    if(arr[i].workHours >8)
     {
-        arr[3]+100;
+        arr[i].salary=(parseInt(arr[i].salary)+100)+"$"
     }
-    else{
-        arr[3]+50;
-    }
-   }
-    return arr;
-}
+    else
+    {
+        arr[i].salary=(parseInt(arr[i].salary)+50)+"$"
 
-// -------------------------------------------------------------------------------------------------------
+
+    }
+};
+return arr;
+=======
+
+}
 
 // -------------------------------------------------------------------------------------------------------
 // Challenge 04:
