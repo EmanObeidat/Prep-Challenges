@@ -95,8 +95,8 @@ return{
 // 
 
 const vowelsFiltration = (arr) => {
-let regex=/[aeiou]/g ,i;
-return arr.filter(arr.test(regex));
+let newArr=arr.filter(n=>{return !/[aeiou]/.test(n)})
+return newArr;
 } 
 // -------------------------------------------------------------------------------------------------------
 
