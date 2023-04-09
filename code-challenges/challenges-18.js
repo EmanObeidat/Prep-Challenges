@@ -70,7 +70,20 @@ const wordLetters = (str1, str2) => {
 //
 
 const targetIndex = (arr, int) => {
-    // write your code here
+    let location=0;
+    for (let i = 0; i < arr.length; i++) {
+        const element = arr[i];
+        if(element==int){
+            location=i;
+        }
+        else if (element<int){
+            location=i+1;
+        }
+        else if(element>int){
+            break;
+        }
+    }
+    return location;
 }
 // -------------------------------------------------------------------------------------------------------
 
