@@ -59,7 +59,7 @@
         {
             "language": "javascript",
             "source": [
-                ""
+                "function timeInWords(h, m) {\n    const words = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'quarter', 'sixteen', 'seventeen', 'eighteen', 'nineteen', 'twenty', 'twenty one', 'twenty two', 'twenty three', 'twenty four', 'twenty five', 'twenty six', 'twenty seven', 'twenty eight', 'twenty nine', 'half'];\n    let hour = words[h];\n    let minute;\n    if (m === 0) {\n        return `${hour} o' clock`;\n    } else if (m === 1) {\n        return `one minute past ${hour}`;\n    } else if (m === 15 || m === 30) {\n        return `${words[m]} past ${hour}`;\n    } else if (m < 30) {\n        minute = words[m];\n        return `${minute} minutes past ${hour}`;\n    } else if (m === 45) {\n        hour = words[h + 1];\n        return `${words[15]} to ${hour}`;\n    } else {\n        hour = words[h + 1];\n        minute = words[60 - m];\n        return `${minute} minutes to ${hour}`;\n    }\n}"
             ],
             "outputs": []
         }
