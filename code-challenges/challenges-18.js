@@ -15,9 +15,8 @@
 //
 
 const wordLength = (str) => {
-    let word = str.split(' ');
-    let indexOfMiddle = Math.floor(word.length/2);
-    return word[indexOfMiddle].length;}
+    // write your code here
+}
 // -------------------------------------------------------------------------------------------------------
 
 
@@ -41,13 +40,8 @@ const wordLength = (str) => {
 // Output: false
 
 const wordLetters = (str1, str2) => {
-    let arr1 = str1.split('');
-    let arr2 = str2.split('');
-    if (arr2.sort().join('')==arr1.sort().join('')){
-        return true;
-      }
-      else {
-        return false;}}
+    // write your code here
+}
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
@@ -70,20 +64,7 @@ const wordLetters = (str1, str2) => {
 //
 
 const targetIndex = (arr, int) => {
-    let location=0;
-    for (let i = 0; i < arr.length; i++) {
-        const element = arr[i];
-        if(element==int){
-            location=i;
-        }
-        else if (element<int){
-            location=i+1;
-        }
-        else if(element>int){
-            break;
-        }
-    }
-    return location;
+    // write your code here
 }
 // -------------------------------------------------------------------------------------------------------
 
