@@ -45,7 +45,7 @@
         {
             "language": "javascript",
             "source": [
-                ""
+                "function encryption(s) {\n    let len = s.length,\n    upper = Math.ceil(Math.sqrt(len)),\n    lower = Math.floor(Math.sqrt(len)),\n    row = 0,\n    col = 0,\n    output = [],\n    result = \"\";\n\n    if (upper * lower < len) {\n        lower = upper;\n        output = Array(upper).fill('')\n                .map(() => Array(upper).fill(''))\n    } else {\n        output = Array(lower).fill('')\n                .map(() => Array(upper).fill(''))\n    }\n\n    for (let i = 0; i < s.length; i++) {\n        if (s.charAt(i) === \" \") {\n            s[i] = \"\";\n        }\n    }\n\n    for (let i = 0; i < s.length; i++) {\n        if (row === lower) {\n            break;\n        }\n        \n        if (s.charAt(i) == \"\") {\n            continue;\n        }\n\n        if (i != 0 && (i % upper) === 0) {\n            row++;\n            col = 0;\n        }\n\n        output[row][col++] = s[i];\n    }\n\n    output = transpose(output);\n    \n    for (let i = 0; i < output.length; i++) {\n        result += output[i].join('');\n        result += \" \";\n    }\n\n    return result;\n}"
             ],
             "outputs": []
         },
